@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Users</title>	
+<link rel="stylesheet"href= "css/main.css">
+<link rel="stylesheet"href= "css/viewuser.css">
+<link rel="stylesheet" href="./css/fontaweasome/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+</style>
+
+<link rel="shortcut icon"type="image.png" href="image/logo.jpg">
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>	
+</head>
+<body>
+	
+	
+    <!------ header ----------->
+    <header class="header">
+		<div class="id">
+		<img src="image/officers/officer2.jpg" onclick="ShowProfile(this)">
+		
+			<ul class="profile-option">
+				<li><i class="fas fa-camera-retro"></i>change photo</li>
+			  <li onclick="changePassword()"><i class="fas fas fa-key"></i>change password</li>
+			  <li><i class="fas fa-fill-drip"></i>select color</li>
+				<li>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			  </li>
+			  
+			</ul>
+			
+		  </div>	
+		<ul class="header-icons">
+		<li><i class="far fa-bell"></i></li>
+		<li onclick="showSearch()"><i class="fas fa-search"></i></li>
+		</ul>
+    </header>
+ <!------End header ----------->
+
+	    <!------ Search ----------->
+ <div class="search-holder">     
+    <form>
+	 <input type ="text"class="search"id="search-input"placeholder="look at tickets history">
+      <button class="find">find it</button>
+   </form>      
+   </div>
+    <!------ End Search ----------->
+
+	
+
+	   
+	<! –– left bar -->
+	
+ <div class="left">
+  <ul class="main-ul">
+   <li onclick="ShowDashBoard()"><i class="fas fa-home"></i>dashboard</li>
+   <li class="l-open" onclick="ShowDashBoard()">
+	 <i class="fab fa-openid"></i>ticket
+   </li>
+	  <ul class="x-ul">
+	   <li onclick="FadeOutText()">create</li>
+	   <li>new</li>
+	   <li>pending</li>
+	   <li>closed</li>
+	   </ul>    
+   <li onclick="ShowDashBoard()" class="l-open" ><i class="far fa-plus-square"></i>request</li>
+	<ul class="x-ul">
+	<li onclick="ShowRequests()">create</li>
+	<li>pending</li>
+	<li>approve</li>
+	</ul>
+	  <li class="l-open"><i class="far fa-lightbulb"></i>brilliant</li>
+	  <ul class="x-ul" id="u2">
+	<li>share</li>
+	<li>show on</li>	
+	</ul>    
+   <li class="l-open"><i class="far fa-clock"></i>events</li>
+   <li><i class="fa fa-sign-out-alt "></i>sign out</li>
+   </ul>
+     <div class="timer">
+		<span>08</span>
+		<span>:</span>
+		<span>00</span>
+	 </div>
+    </div>
+<!--	End left-->
+<div class="medium">
+	
+	<div class="container">
+		
+		
+	<div class="user-control">
+<!--		user img-->
+	 <div class="img"> <img src="image/officers/ahmed.png"></div>
+<!--		user img end -->
+		
+<!--		user info-->
+   <div class="pCard_up">
+      <div class="pCard_text">
+         <h2>ahmed mostafa</h2>
+         <p>cms manager</p>
+      </div>
+   </div>
+		
+   <div class="pCard_down">
+      <div>
+         <p>Task</p>
+         <p>126</p>
+      </div>
+      <div>
+         <p>opening</p>
+         <p>4</p>
+      </div>
+      <div>
+         <p>closed</p>
+         <p>122</p>
+      </div>
+   </div>
+    <div class="pCard_add">
+	  <i class="fa fa-plus"></i></div>
+		<div class="option">
+		  <button><i class="far fa-edit"></i></button> 
+		  <button><i class="fas fa-user-times"></i></button>
+		</div>
+		<div class="on-off">
+		<span></span>
+		</div>
+</div>
+
+</div>		
+		
+		
+		
+<!--End Medium-->
+</div>
+<!--End Medium-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/Tickets.js"></script>
+
+</body>
+</html>

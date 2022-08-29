@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Admin</title>	
+<link rel="stylesheet"href= "css/main.css">
+<link rel="stylesheet"href= "css/admin.css">
+<link rel="stylesheet" href="./css/fontaweasome/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+</style>
+
+<link rel="shortcut icon"type="image.png" href="image/logo.jpg">
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>	
+</head>
+<body>
+	
+<!--	Header-->
+	<header>
+	 <div class="logo">
+		 <img src="image/Logoo.png">
+		<span id="sign-in">welcome,</span>
+		</div>
+     
+		<ul>
+		 <li><i class="far fa-bell"></i></li>
+		 <li onclick="createUser()"><i class="fas fa-user-plus"></i></li>
+		 <li><i class="fas fa-sign-out-alt"></i></li>
+		</ul>
+	
+    </header>
+<!--	 	Header-->
+	 
+	<! –– left bar -->
+ <div class="left">
+  <ul class="main-ul">
+   <li><i class="fas fa-home"></i>main</li>
+	  <li class="l-open" onclick="showUsers()">
+	 <i class="fab fa-openid"></i>
+		  users
+   </li>
+   <li class="l-open">
+	 <i class="fab fa-openid"></i>attendance
+   </li>
+	  <ul class="x-ul">
+	   <li>on</li>
+	   <li>dayof</li>
+	   <li>absent</li>
+	   </ul>
+<li class="l-open" ><i class="fas fa-chart-line"></i>evaluation</li>
+	<ul class="x-ul">
+       <li>daily</li>
+       <li>weekly</li>
+       <li>monthly</li>
+	   <li>quarter</li>	</ul>    
+  
+   <li class="l-open" ><i class=""></i>requests</li>
+   <li class="l-open" onclick="setEvent()"><i class=""></i>set an event</li>
+	
+   </ul>
+     
+    </div>
+<!--End left-->
+	
+	
+	
+ <div class="medium" id="toggle">
+	 
+	 	 <div class="pannel-layer" id="lay">
+			 
+<!--			 Admin panael-->
+	 <div class="admin-pannel">
+	  <div>
+	   <span>first name :</span>
+	   <input type="text" placeholder="officer first name">
+       <span>last name :</span>
+	   <input type="text" placeholder="officer last name">
+	  </div>	 
+	    <div>
+		 <span>team :</span>
+		 <span>youTube</span>
+		 <input type="radio" name="team">
+		 <span>social</span>
+		 <input type="radio" name="team">
+		 <span>digital</span>
+		 <input type="radio" name="team">
+			 <span>development</span>
+		 <input type="radio" name="team">
+			 <span>aqusation</span>
+		 <input type="radio" name="team">
+		 </div>
+		<div class="custom-select" style="width:200px;">
+         <select>
+          <option value="0">Select a position:</option>
+          <option value="1">manager</option>
+          <option value="2">team leader</option>
+          <option value="3">senior</option>
+          <option value="4">junior</option>
+          <option value="5">internship</option>
+         </select>
+		<span class="custom-arrows"></span>
+       </div>
+		 
+        <div>
+		 <span>email :</span> 
+		 <input type="email" placeholder="FX/...@gmail.com">
+		 <span>password :</span>
+		 <input type="password" placeholder="set a password">
+		</div>
+		 <div class="premission">
+		<input type="checkbox" id="task-access">
+	     <label for="task-access" onclick="taskAcess()">
+			 view tasks
+		  <i class="far fa-eye-slash"></i>
+		 </label>
+			<div class="taskAcess-id">
+				<span>type a name :</span>
+				<input type="text">
+			</div>
+		 
+			 <input type="checkbox" id="premission">
+	     <label for="premission" onclick="approveAccess()">
+			 approving
+            <i class="far fa-calendar-check"></i>
+		</label>
+			 <div class="approve-access">
+				<span>type a name :</span>
+				<input type="text">
+			</div>
+		 
+		 </div>
+		 
+		 
+		 <div class="create">
+		 <button>create<i>&rarr;</i></button>
+		 </div>
+	    </div>
+	 </div>
+	 
+<!--	 End admin pannel-->
+	 
+	 
+	 
+    
+	 
+	 
+	 
+	 
+	 
+
+	 
+<!------------Officers start------------>
+	 
+<div class="users">
+	<!------------ Filter--------->
+	 <div class="filter-button">
+	  <h3 onclick="showFilter(this)"><i class="fas fa-filter"></i><span>filter</span></h3>
+	 </div>
+	 
+<div class="filter request-inputs">
+ <div class="filter-name">
+			<h5>type a name</h5> 
+		 <input type="text" placeholder="type a name">
+        
+		 </div>
+		 
+		 <div class="filter-team">
+			<h5>select a team</h5> 
+		 <input type="checkbox" id="box-1">
+        <label for="box-1">youtube</label>
+        <input type="checkbox" id="box-2">
+        <label for="box-2">social</label>
+		 <input type="checkbox" id="box-3">
+        <label for="box-3">digital</label>
+		<input type="checkbox" id="box-4">
+        <label for="box-4">development</label>
+			 <input type="checkbox" id="box-5">
+        <label for="box-5">aqusation</label>
+		 </div>
+
+		 <div class="filter-title">
+		<h5>select a title</h5> 
+		 <input type="checkbox" id="box-1">
+        <label for="box-1">managers</label>
+        <input type="checkbox" id="box-2">
+        <label for="box-2">team leaders</label>
+		 <input type="checkbox" id="box-3">
+        <label for="box-3">seniors</label>
+		<input type="checkbox" id="box-4">
+        <label for="box-4">officers</label>
+		 </div>
+	 </div>
+		 <!------------ Filter End--------->
+
+	 <div class="contain">
+	<div class="user-control" >
+		<div>
+		 <img src="image/officers/ahmed.png">
+		</div>
+	   	 <div class="officer-id">		  
+		  <p>shady</p>
+		  <p>cms officer</p>
+         </div>	
+		<div class="option">
+		  <span><i class="fa fa-check"></i></span> 
+		  <span><i class="fas fa-user-times"></i></span>
+		  <span><i class="fas fa-tasks"></i></span>
+		  <span><i class="fas fa-pencil-alt"></i></span>
+		</div>
+		<div class="on-off">
+		<span></span>
+		</div>
+		<div class="tasks-data">
+		<div>
+			<p>total tasks</p>
+			<p>100</p>
+		</div>
+			<div>
+			<p>opening</p>
+			<p>2</p>
+		</div>
+			<div>
+			<p>closed</p>
+			<p>98</p>
+		</div>
+		
+		
+		</div>
+	 </div>
+	  
+
+	<div class="user-control" >
+		<div>
+		 <img src="image/officers/ahmed.png">
+		</div>
+	   	 <div class="officer-id">		  
+		  <p>shady</p>
+		  <p>cms officer</p>
+         </div>	
+		<div class="option">
+		  <span><i class="fa fa-check"></i></span> 
+		  <span><i class="fas fa-user-times"></i></span>
+		  <span><i class="fas fa-tasks"></i></span>
+		  <span><i class="fas fa-pencil-alt"></i></span>
+		</div>
+		<div class="on-off">
+		<span></span>
+		</div>
+		<div class="tasks-data">
+		<div>
+			<p>total tasks</p>
+			<p>100</p>
+		</div>
+			<div>
+			<p>opening</p>
+			<p>2</p>
+		</div>
+			<div>
+			<p>closed</p>
+			<p>98</p>
+		</div>
+		
+		
+		</div>
+	 </div>
+		 	<div class="user-control" >
+		<div>
+		 <img src="image/officers/ahmed.png">
+		</div>
+	   	 <div class="officer-id">		  
+		  <p>shady</p>
+		  <p>cms officer</p>
+         </div>	
+		<div class="option">
+		  <span><i class="fa fa-check"></i></span> 
+		  <span><i class="fas fa-user-times"></i></span>
+		  <span><i class="fas fa-tasks"></i></span>
+		  <span><i class="fas fa-pencil-alt"></i></span>
+		</div>
+		<div class="on-off">
+		<span></span>
+		</div>
+		<div class="tasks-data">
+		<div>
+			<p>total tasks</p>
+			<p>100</p>
+		</div>
+			<div>
+			<p>opening</p>
+			<p>2</p>
+		</div>
+			<div>
+			<p>closed</p>
+			<p>98</p>
+		</div>
+		
+		
+		</div>
+	 </div>
+	  
+
+</div>
+	 
+	 
+	 </div>
+
+<!------------Officers End------------>
+
+	
+
+	 
+	 
+	 <!------------Event start------------>
+
+	 <div class="set-event">
+		<div>
+		<span>date :</span>
+		<input type="date">
+		<span>hour :</span>
+		<input type="time">
+		<span>area :</span>
+		<input type="text">
+		<span>reason :</span>
+		<input type="text">
+		<span>requires :</span>
+		<input type="text">
+		</div>
+		
+		<div>
+		<span>attending :</span>
+		<input type="checkbox" id="set1">
+		<label for="set1">all</label>
+		<input type="checkbox" id="set2">
+        <label  onclick="specifiedUser()" for="set2">specific officer</label>
+			<div class="specified-user">
+				<span>type a name :</span>
+				<input type="text">
+			</div>
+		<input type="checkbox" id="set3">
+		<label for="set3">youtube team</label>
+		<input type="checkbox" id="set4">
+		<label for="set4">social team</label>
+		<input type="checkbox" id="set5">
+		<label for="set5">digital team</label>
+		<input type="checkbox" id="set6">
+		<label for="set6">finiance</label>
+		<input type="checkbox" id="set7">
+		<label for="set7">legal</label>
+		<input type="checkbox" id="set8">
+		 <label for="set8">it</label>
+		<input type="checkbox" id="set9">
+		<label for="set9">admin</label>
+		</div>
+		
+		
+		 <div class="user-control" >
+		<div>
+		 <img src="image/officers/officer2.jpg">
+		</div>
+	   	 <div class="officer-id">		  
+		  <p>ahmed mostafa</p>
+		  <p>cms officer</p>
+         </div>		    
+		</div>
+		
+		<div><button>invite</button></div>
+
+	</div>	
+		
+	 	 <!------------Event End------------>
+
+	 
+	 
+	 
+	 
+<!------------End Medium------------>
+	</div>
+<!------------End Medium------------>
+
+	
+<script src="js/jquery.js"></script>
+        <script src="js/Tickets.js"></script>
+</body>
+</html>

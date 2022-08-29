@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Open a Ticket</title>	
+<link rel="stylesheet"href= "css/main.css">
+<link rel="stylesheet"href= "css/openticket.css">
+<link rel="stylesheet" href="./css/fontaweasome/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap')
+</style>
+
+<link rel="shortcut icon"type="image.png" href="image/logo.jpg">
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>	
+</head>
+<body>
+	
+	 <!------ header ----------->
+    <header>
+		<div class="id">
+		<img src="image/officers/officer2.jpg">
+		</div>
+		<ul>
+		<li><i class="far fa-bell"></i></li>
+		<li><i class="fas fa-search"></i></li>
+		</ul>
+    </header>
+	    <!------End header ----------->
+
+	    <!------ Search ----------->
+ <div class="search-holder" id="s-holder">     
+    <form>
+	 <input type ="text"class="search"id="search-input"placeholder="look at tickets history">
+      <button class="find">find it</button>
+   </form>      
+   </div> 
+    <!------ End Search ----------->
+
+	
+
+	   
+	<! –– left bar -->
+ <div class="left">
+  <ul class="main-ul">
+   <li><i class="fas fa-home"></i>dashboard</li>
+   <li class="l-open">
+	 <i class="fab fa-openid"></i>ticket
+   </li>
+	  <ul class="x-ul">
+	   <li>open</li>
+	   <li>todo's</li>
+	   <li>pending</li>
+	   </ul>
+<li class="l-open" ><i class="fa fa-user-circle"></i>profile</li>
+	<ul class="x-ul">
+	<li>summary</li>
+	<li>score</li>	
+	</ul>    
+   <li class="l-open" ><i class="far fa-plus-square"></i>request</li>
+	<ul class="x-ul">
+	<li>annual</li>
+	<li>excuse</li>
+	<li>loan</li> 
+	</ul>
+	  <li class="l-open"><i class="far fa-lightbulb"></i>brilliant</li>
+	  <ul class="x-ul" id="u2">
+	<li>share</li>
+	<li>show on</li>	
+	</ul>    
+   <li><i class="far fa-clock"></i>events</li>
+   <li><i class="fa fa-sign-out-alt "></i>sign out</li>
+   </ul>
+     <div class="timer">
+		<span>08</span>
+		<span>00</span>
+	 </div>
+    </div>
+	
+	<!-----------------------Medium parent----------------->
+	<div class="medium" id="toggle">
+		
+	<!---------ticket form parent------->
+
+		
+		
+	<div class="contain">
+	<div class="ticket-form">	
+		<div class="sender-id">
+			<img src="image/officers/ahmed.png"><span>12:44 pm</span>
+		</div>
+		<table class="">
+        <thead>
+        <tr>
+            <th>task title</th>
+            <th>task type</th>
+            <th>platform</th>
+            <th>client</th>
+            <th>deadline</th>
+            <th>comment</th>
+        </tr>
+        </thead>
+			
+	    <thead>
+        <tr>
+            <td>task 1</td>
+            <td>daily</td>
+            <td>youtube</td>
+            <td>injaz</td>
+            <td>19-10-2021 09:00 pm</td>
+            <td>
+			<i class="chat far fa-comment-dots" onclick="showChat()"></i></td>
+            <td onclick="taskDetails(this)"><i class="fas fa-arrow-down" name="more" ></i></td>
+        </tr>
+        </thead>
+	    </table>
+		
+		<div class="ticket-overflow" >
+			
+		 <div class="description">
+			<p>description</p>
+			
+		</div>
+		<div class="attached"></div>
+			
+			
+		
+			
+		<div class="status">
+	   <button class="status-button" onclick="ticketStatus()">status</button>
+			
+			<div class="status-option" id="status-button">
+			<p>in progress</p>
+			<p>closed</p>
+			</div>
+		</div>
+			
+	    </div>
+		
+		
+	</div>
+		<div class="chatbox">
+			<div class="text">text</div>
+			<div class="type">
+			<textarea placeholder="Type a comment here.." name="msg"></textarea>
+			<i class=" send fa fa-play"></i>	
+			
+			</div>
+			
+			
+		</div>
+			<div class="ticket-form">	
+		<div class="sender-id">
+			<img src="image/officers/ahmed.png"><span>12:44 pm</span>
+		</div>
+		<table class="">
+        <thead>
+        <tr>
+            <th>task title</th>
+            <th>task type</th>
+            <th>platform</th>
+            <th>client</th>
+            <th>deadline</th>
+            <th>comment</th>
+        </tr>
+        </thead>
+			
+	    <thead>
+        <tr>
+            <td>task 1</td>
+            <td>daily</td>
+            <td>youtube</td>
+            <td>injaz</td>
+            <td>19-10-2021 09:00 pm</td>
+            <td>
+			<i class="chat far fa-comment-dots" onclick="showChat()"></i></td>
+            <td onclick="taskDetails()"><i class="fas fa-arrow-down" name="more" ></i></td>
+        </tr>
+        </thead>
+	    </table>
+		
+		<div class="ticket-overflow" >
+			
+		 <div class="description">
+			<p>description</p>
+			
+		</div>
+		<div class="attached"></div>
+			
+			
+		
+			
+		<div class="status">
+	   <button class="status-button" onclick="ticketStatus()">status</button>
+			
+			<div class="status-option" id="status-button">
+			<p>in progress</p>
+			<p>closed</p>
+			</div>
+		</div>
+			
+	    </div>
+		
+		
+	</div>
+		<div class="chatbox">
+			<div class="text">text</div>
+			<div class="type">
+			<textarea placeholder="Type a comment here.." name="msg"></textarea>
+			<i class=" send fa fa-play"></i>	
+			
+			</div>
+			
+			
+		</div>
+		
+		</div>
+	<!-------End Ticket form parent------->
+		
+		
+   <!----------Ticket status button-------->
+		
+	<!-----------End ticket status button---------->
+
+		
+	</div>
+	
+	
+	
+	
+		<!----------------End Medium parent---------->
+
+	
+	
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/Tickets.js"></script>
+ </body>    
+</html>
